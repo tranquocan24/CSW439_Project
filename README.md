@@ -1,28 +1,28 @@
 # Olist Customer Review Classification & Early Warning System
 
-Dự án môn học **CSW439 - Khai phá dữ liệu (Data Mining)** - Nhóm 1.
+Dự án môn học CSW439 - Khai phá dữ liệu (Data Mining) - Nhóm 1.
 
-## 📌 Tổng quan bài toán
+## Tổng quan bài toán
 Dự án xây dựng mô hình Học máy phân loại nhị phân (Binary Classification) để dự đoán một đơn hàng Olist sau khi giao thành công (`delivered`) sẽ nhận được đánh giá Tốt (Positive - 4, 5 sao) hay Xấu (Negative - 1, 2, 3 sao). 
 
-Mục tiêu chính là **cảnh báo sớm các đơn hàng có nguy cơ nhận review xấu (Class 0)** để doanh nghiệp kịp thời thực hiện các chương trình chăm sóc khách hàng, cải thiện trải nghiệm người dùng. Do dữ liệu mất cân bằng nghiêm trọng (~21% Class 0), mô hình tập trung tối ưu hóa chỉ số **Recall** và **F1-score của Class 0**.
+Mục tiêu chính là cảnh báo sớm các đơn hàng có nguy cơ nhận review xấu (Class 0) để doanh nghiệp kịp thời thực hiện các chương trình chăm sóc khách hàng, cải thiện trải nghiệm người dùng. Do dữ liệu mất cân bằng nghiêm trọng (~21% Class 0), mô hình tập trung tối ưu hóa chỉ số Recall và F1-score của Class 0.
 
 ---
 
-## 🛠️ Phương pháp và Cấu trúc dự án
-Notebook gộp **4 mô hình chính** trên cùng một luồng tiền xử lý (Preprocessing Pipeline) chung sử dụng **14 đặc trưng** được trích xuất từ dữ liệu vận hành, tài chính và thông tin sản phẩm của Olist:
-1. **Decision Tree** (Cây quyết định)
-2. **K-Nearest Neighbors (KNN)** (K lân cận)
-3. **Logistic Regression** (Hồi quy Logistic)
-4. **Random Forest** (Rừng ngẫu nhiên)
+## Phương pháp và Cấu trúc dự án
+Notebook gộp 4 mô hình chính trên cùng một luồng tiền xử lý (Preprocessing Pipeline) chung sử dụng 14 đặc trưng được trích xuất từ dữ liệu vận hành, tài chính và thông tin sản phẩm của Olist:
+1. Decision Tree (Cây quyết định)
+2. K-Nearest Neighbors (KNN) (K lân cận)
+3. Logistic Regression (Hồi quy Logistic)
+4. Random Forest (Rừng ngẫu nhiên)
 
 ### Các kỹ thuật cải thiện mô hình:
-* **SMOTE & Undersampling**: Giải quyết bài toán mất cân bằng dữ liệu gốc.
-* **Threshold Tuning (Tinh chỉnh ngưỡng quyết định)**: Điều chỉnh ngưỡng phân lớp phù hợp để tối ưu hóa khả năng bắt review xấu (tối ưu hóa Recall Class 0).
+* SMOTE & Undersampling: Giải quyết bài toán mất cân bằng dữ liệu gốc.
+* Threshold Tuning (Tinh chỉnh ngưỡng quyết định): Điều chỉnh ngưỡng phân lớp phù hợp để tối ưu hóa khả năng bắt review xấu (tối ưu hóa Recall Class 0).
 
 ---
 
-## 📊 Kết quả so sánh mô hình
+## Kết quả so sánh mô hình
 
 | STT | Mô hình | Accuracy | Precision (Class 0) | Recall (Class 0) | F1-score (Class 0) | F1-weighted |
 |---|---|---|---|---|---|---|
@@ -39,16 +39,16 @@ Notebook gộp **4 mô hình chính** trên cùng một luồng tiền xử lý 
 
 ---
 
-## 👥 Thành viên nhóm 1 & Mức độ đóng góp
-* **Trần Quốc An** (22%) - Train model, làm slide, thuyết trình
-* **Lê Minh Trí** (22%) - Train model, làm slide, thuyết trình
-* **Nguyễn Phúc Hậu** (22%) - Train model, làm slide, thuyết trình
-* **Đặng Cao Cường** (22%) - Train model, làm slide, thuyết trình
-* **Lê Triết Huân** (12%) - Xử lý data
+## Thành viên nhóm 1 & Mức độ đóng góp
+* Trần Quốc An (22%) - Train model, làm slide, thuyết trình
+* Lê Minh Trí (22%) - Train model, làm slide, thuyết trình
+* Nguyễn Phúc Hậu (22%) - Train model, làm slide, thuyết trình
+* Đặng Cao Cường (22%) - Train model, làm slide, thuyết trình
+* Lê Triết Huân (12%) - Xử lý data
 
 ---
 
-## 📂 Hướng dẫn chạy dự án
+## Hướng dẫn chạy dự án
 1. Clone repository này về máy.
 2. Tải và giải nén bộ dữ liệu Olist để vào thư mục `data/` ở thư mục gốc của dự án.
 3. Mở Jupyter Notebook và chạy toàn bộ các cell trong `Olist_Early_Warning_AllModels_Group_1.ipynb`.

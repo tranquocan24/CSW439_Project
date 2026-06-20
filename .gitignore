@@ -1,5 +1,4 @@
-# Ignore data folders (large datasets)
-data/
+# Ignore input folder (large datasets)
 input/
 
 # Ignore notebooks checkpoints
