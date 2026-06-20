@@ -1,0 +1,13 @@
+# Ignore data folders (large datasets)
+data/
+input/
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore generated datasets and comparison metrics
+processed_model_dataset.csv
+model_comparison.csv
+
+# Ignore local generated figures
+figures/
